@@ -17,6 +17,9 @@ export default {
     baseURL: "/DebaiSite/",
     cdnURL: "https://Iris-Fla.github.io/DebaiSite/",
   },
+  generate: {
+    dir: "docs",
+  },
   vite: {
     server: {
       watch: {
