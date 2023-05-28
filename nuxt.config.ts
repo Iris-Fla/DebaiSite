@@ -11,9 +11,11 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
+  target: "static",
   app: {
     pageTransition: { name: "page", mode: "out-in" },
-    cdnURL: "/DebaiSite/",
+    baseURL: "/DebaiSite/",
+    cdnURL: "https://Iris-Fla.github.io/DebaiSite/",
   },
   vite: {
     server: {
