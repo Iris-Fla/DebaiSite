@@ -24,4 +24,7 @@ export default {
       },
     },
   },
+  router: {
+    base: "/DebaiSite/",
+  },
 };
