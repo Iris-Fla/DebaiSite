@@ -13,6 +13,7 @@ export default {
   },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+    cdnURL: "/DebaiSite/",
   },
   vite: {
     server: {
