@@ -29,7 +29,7 @@
         ></div>
         <p class="card-text mx-4 mt-4 fs-5">全n問</p>
         <NuxtLink
-          href="./about"
+          href="./sample"
           class="btn hd hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
           >デバ検を受ける！</NuxtLink

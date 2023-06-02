@@ -67,7 +67,7 @@
 }
 
 #GataDeba {
-  animation: GDAnimation 5s infinite;
+  animation: rotation 5s infinite;
 }
 </style>
 <script setup lang="ts">
