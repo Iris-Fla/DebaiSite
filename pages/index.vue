@@ -35,6 +35,12 @@
           >デバ検を受ける！</NuxtLink
         >
         <NuxtLink
+          href="./chat"
+          class="btn hd hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+          style="height: 60px"
+          >デバチャット β</NuxtLink
+        >
+        <NuxtLink
           href="./error"
           class="btn gb hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
