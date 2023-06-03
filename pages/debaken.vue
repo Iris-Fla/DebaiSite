@@ -64,23 +64,7 @@ const questions = ref([
     alert: "ハダカデバネズミは基本地中で生活するから、体温調整をしなくてもよい！😁😁",
   },
   {
-    title_text: "不思議！",
-    questionText: "ハダカデバネズミに体毛がない理由は？",
-    ans: ["天敵から身を守るため", "体温調整をしなくてもいいため", "なぞい"],
-    correctAnswer: 1,
-    fileName: "/hamu.jpg",
-    alert: "ハダカデバネズミは基本地中で生活するから、体温調整をしなくてもよい！😁😁",
-  },
-  {
-    title_text: "簡単！",
-    questionText: "Pアズールレーンで上記画像の信頼度は？",
-    ans: ["70%", "77.7%", "大当り濃厚?!"],
-    correctAnswer: 0,
-    fileName: "/saikyou.jpg",
-    alert: "この演出で信頼度が70%です。金文字出すなら80↑は欲しい！",
-  },
-  {
-    title_text: "",
+    title_text: "1",
     questionText: "この絵のタイトルは？",
     ans: ["", "", ""],
     correctAnswer: 444,
@@ -88,17 +72,49 @@ const questions = ref([
     alert:""
   },
   {
-    red_title_text: "",
+    title_text: "歯！",
+    questionText: "ハダカデバネズミの歯は何日で生え変わる？",
+    ans: ["1日", "1週間", "1ヶ月"],
+    correctAnswer: 1,
+    fileName: "/Lion.jpg",
+    alert:"歯は1週間に5ミリの速さで伸び続けており、表面に出ている歯の長さもおよそ5ミリほどなので、1週間で歯が新しく入れ替わることになるデバ"
+  },
+  {
+    title_text: "Life of Deba",
+    questionText: "ハダカデバネズミの寿命は約何年?",
+    ans: ["5", "10", "30"],
+    correctAnswer: 2,
+    fileName: "/many_deba_illust.png",
+    alert: "デバが長生きする秘密は今も研究されている...!😉ガン防止にも効果があるかも！",
+  },
+  {
+    red_title_text: "2",
     questionText: "X回見たら〇ぬ絵。Xに入る数字",
     ans: ["1", "2", "3"],
     correctAnswer: 2,
     fileName: "/y2.jpg",
-    alert:"WOW"
+    alert:""
+  },
+  {
+    title_text: "デバ？",
+    questionText: "これは何?",
+    ans: ["ハダカデバネズミ", "ちくわ", "わくちん"],
+    correctAnswer: 1,
+    fileName: "/tikuwa1.jpg",
+    alert:"ちくわだよ"
+  },
+  {
+    title_text: "デバ！",
+    questionText: "これは何?",
+    ans: ["バダガデバネズミ", "ハダカデバネズミ", "ちくわ"],
+    correctAnswer: 1,
+    fileName: "/tikuwa.jpg",
+    alert:"ちくわじゃないよ"
   },
   {
     red_title_text: "あっ...",
     questionText: "",
-    ans: ["頭", "腕", "身"],
+    ans: ["", "", ""],
     correctAnswer: 444,
     fileName: "/y3.jpg",
   },
@@ -116,6 +132,7 @@ const NextQuestion = () => {
     alert("終了！あなたの正解数は" + score.value + "/" + count_question.value);
     NowQuestion.value = 0;
     score.value = 0;
+    location = './'
     return;
   }
   NowQuestion.value++;
@@ -131,41 +148,45 @@ const checkAnswer = (index) => {
   if (index === questions.value[NowQuestion.value].correctAnswer) {
     alert("正解\n"+questions.value[NowQuestion.value].alert);
     score.value++;
-    animated_image();
     NextQuestion();
-    
+    animated_image()
   } else {
     alert("不正解\n"+questions.value[NowQuestion.value].alert);
-    animated_image();
     NextQuestion();
+    animated_image()
   }
 };
 
-// 画像のアニメーション(未実装)
+// 画像のアニメーション(フェード)
 const animated_image = () => {
   const img = document.querySelector(".animated_img");
     img.classList.add("animated");
     setTimeout(() => {
       img.classList.remove("animated");
-    }, 1000);
+    }, 500);
   };
 
 </script>
-<style>
-.animated {
-  animation: fadeInOut 1s infinite;
+<style scoped>
+.container {
+  backface-visibility:hidden;
+  overflow:hidden;
 }
-.debacolor {
-  color: #fcbda3;
+.animated {
+  animation: fadeInOut 0.5s infinite;
 }
 .red {
   color: #d41515;
 }
-.btn {
-  color: var(--bs-white);
+.title_text {
+  font-size: 80px;
 }
 .hover-effect:hover {
-  background-color: #fcbda3;
+  color: #ffffff;
+  background-color: rgb(77, 44, 44);
+}
+.btn {
+  color: var(--bs-white);
 }
 .a {
   background: #87cf91;
@@ -175,9 +196,6 @@ const animated_image = () => {
 }
 .c {
   background: #c78282;
-}
-.title_text {
-  font-size: 80px;
 }
 
 @keyframes fadeInOut {

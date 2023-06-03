@@ -20,31 +20,39 @@
           style="max-width: 320px"
         ></div>
         <p class="card-text mx-4 info">
-          デバ検定を受けよう<br />
-          受験は下のボタンから～😋
+          デバ検※を受けよう<br />
+          受験は下のボタンから～<br>
+          (※デバい検定)
         </p>
+        <NuxtLink
+          href="./debaken"
+          class="btn hd hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+          style="height: 60px"
+          >デバ検を受ける！😎</NuxtLink
+        >
         <div
           class="mx-auto mt-3 text-center border-bottom rounded-5"
           style="max-width: 320px"
         ></div>
-        <p class="card-text mx-4 mt-4 fs-5">全n問</p>
+        <p class="card-text mx-4 mt-4 fs-5">様々なデバ験※もできます。<br>(※デバい体験)</p>
+        
         <NuxtLink
-          href="./sample"
-          class="btn hd hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+          href="./debachat"
+          class="btn a hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
-          >デバ検を受ける！</NuxtLink
+          >デバチャット💬</NuxtLink
         >
         <NuxtLink
-          href="./chat"
-          class="btn hd hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+          href="./debaba"
+          class="btn b hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
-          >デバチャット β</NuxtLink
+          >デバウト🐭(About)</NuxtLink
         >
         <NuxtLink
           href="./error"
-          class="btn gb hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+          class="btn c hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
-          >おまけ ※エラーページ</NuxtLink
+          >おまけ💘 ※デバーページ(error)</NuxtLink
         >
       </div>
     </div>
@@ -52,19 +60,18 @@
 </template>
 
 <style scoped>
+.hover-effect:hover {
+  color: #ffffff;
+  background-color: rgb(77, 44, 44);
+}
 span {
   color: #fcbda3;
 }
 .hd {
-  color: var(--bs-white);
   background: #fcbda3;
 }
 .gb {
-  color: var(--bs-white);
   background: #ffd685;
-}
-.hover-effect:hover {
-  background-color: rgb(73, 32, 32);
 }
 
 .work {
@@ -73,6 +80,8 @@ span {
 .info {
   font-size: 20px;
 }
+
+/* タイトルのアニメーション */
 @keyframes bounce {
   0%,
   20%,

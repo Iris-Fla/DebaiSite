@@ -7,7 +7,7 @@
       <img src="@/assets/deba.jpg" class="card-img-to rounded-5 rounded-bottom" alt="...">
         <div class="card-body mb-3">
             <p
-              class="card-title text-center cocoa title_text"
+              class="card-title text-center debacolor title_text"
             >
               <span>デババ！</span>
             </p>
@@ -17,7 +17,7 @@
             </p>
           <NuxtLink
             href="./"
-            class="btn mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+            class="btn c hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
             style="height: 60px"
             >戻る</NuxtLink
           >
@@ -26,18 +26,11 @@
     </div>
 </template>
 <style scoped>
-.cocoa {
-  color: #875647;
-}
-.btn {
-  color: var(--bs-white);
-  background: #fcbda3;
-}
 .title_text{
     font-size:80px;
 }
 .zunda{
     font-size: 30px;
-    color: #8b512a;
+    color: #9b4b16;
 }
 </style>

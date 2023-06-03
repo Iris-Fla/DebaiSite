@@ -8,14 +8,14 @@
         <div class="card-body mb-3">
           <p class="card-title text-center">{{ error }}</p>
           <p class="card-text text-center title title_text">
-            <span>エラー</span>
+            <span>デバー</span>
           </p>
           <p class="card-text text-center fs-5">デバ...😭</p>
           <NuxtLink
             href="/"
             class="btn hover-effect mt-4 mx-3 d-flex align-items-center text-center rounded-pill text-center"
             style="height: 60px"
-            >ホームに戻るデバよ</NuxtLink
+            >ホームに戻るデバ</NuxtLink
           >
         </div>
       </div>

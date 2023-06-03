@@ -29,3 +29,4 @@ JavaScript を用いて点数をカウントし、最後に評価が与えられ
   - [全画面の背景](https://allabout.co.jp/gm/gc/452705/)
   - [画面遷移](https://zenn.dev/con_ns_pgm/articles/04adfeae84104b)
   - [CSS アニメーション全般](https://openai.com/blog/chatgpt)
+  - [Nuxt3GPT-3](https://tech-blog.rakus.co.jp/entry/20230210/nuxt3)
