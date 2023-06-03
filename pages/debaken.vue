@@ -45,7 +45,6 @@
   </div>
 </template>
 <script setup>
-
 const questions = ref([
   {
     title_text: "デバい！",
@@ -61,15 +60,8 @@ const questions = ref([
     ans: ["天敵から身を守るため", "体温調整をしなくてもいいため", "なぞい"],
     correctAnswer: 1,
     fileName: "/hamu.jpg",
-    alert: "ハダカデバネズミは基本地中で生活するから、体温調整をしなくてもよい！😁😁",
-  },
-  {
-    title_text: "1",
-    questionText: "この絵のタイトルは？",
-    ans: ["", "", ""],
-    correctAnswer: 444,
-    fileName: "/y1.jpg",
-    alert:""
+    alert:
+      "ハダカデバネズミは基本地中で生活するから、体温調整をしなくてもよい！😁😁",
   },
   {
     title_text: "歯！",
@@ -77,7 +69,8 @@ const questions = ref([
     ans: ["1日", "1週間", "1ヶ月"],
     correctAnswer: 1,
     fileName: "/Lion.jpg",
-    alert:"歯は1週間に5ミリの速さで伸び続けており、表面に出ている歯の長さもおよそ5ミリほどなので、1週間で歯が新しく入れ替わることになるデバ"
+    alert:
+      "歯は1週間に5ミリの速さで伸び続けており、表面に出ている歯の長さもおよそ5ミリほどなので、1週間で歯が新しく入れ替わることになるデバ",
   },
   {
     title_text: "Life of Deba",
@@ -85,15 +78,8 @@ const questions = ref([
     ans: ["5", "10", "30"],
     correctAnswer: 2,
     fileName: "/many_deba_illust.png",
-    alert: "デバが長生きする秘密は今も研究されている...!😉ガン防止にも効果があるかも！",
-  },
-  {
-    red_title_text: "2",
-    questionText: "X回見たら〇ぬ絵。Xに入る数字",
-    ans: ["1", "2", "3"],
-    correctAnswer: 2,
-    fileName: "/y2.jpg",
-    alert:""
+    alert:
+      "デバが長生きする秘密は今も研究されている...!😉ガン防止にも効果があるかも！",
   },
   {
     title_text: "デバ？",
@@ -101,7 +87,7 @@ const questions = ref([
     ans: ["ハダカデバネズミ", "ちくわ", "わくちん"],
     correctAnswer: 1,
     fileName: "/tikuwa1.jpg",
-    alert:"ちくわだよ"
+    alert: "ちくわだよ",
   },
   {
     title_text: "デバ！",
@@ -109,14 +95,7 @@ const questions = ref([
     ans: ["バダガデバネズミ", "ハダカデバネズミ", "ちくわ"],
     correctAnswer: 1,
     fileName: "/tikuwa.jpg",
-    alert:"ちくわじゃないよ"
-  },
-  {
-    red_title_text: "あっ...",
-    questionText: "",
-    ans: ["", "", ""],
-    correctAnswer: 444,
-    fileName: "/y3.jpg",
+    alert: "ちくわじゃないよ",
   },
 ]);
 // スコア
@@ -132,7 +111,7 @@ const NextQuestion = () => {
     alert("終了！あなたの正解数は" + score.value + "/" + count_question.value);
     NowQuestion.value = 0;
     score.value = 0;
-    location = './'
+    location = "./";
     return;
   }
   NowQuestion.value++;
@@ -146,34 +125,31 @@ const currentQuestion = computed(() => {
 // 答え合わせ
 const checkAnswer = (index) => {
   if (index === questions.value[NowQuestion.value].correctAnswer) {
-    alert("正解\n"+questions.value[NowQuestion.value].alert);
+    alert("正解\n" + questions.value[NowQuestion.value].alert);
     score.value++;
     NextQuestion();
-    animated_image()
+    animated_image();
   } else {
-    alert("不正解\n"+questions.value[NowQuestion.value].alert);
+    alert("不正解\n" + questions.value[NowQuestion.value].alert);
     NextQuestion();
-    animated_image()
+    animated_image();
   }
 };
 
 // 画像のアニメーション(フェード)
 const animated_image = () => {
   const img = document.querySelector(".animated_img");
-    img.classList.add("animated");
-    setTimeout(() => {
-      img.classList.remove("animated");
-    }, 500);
-  };
-
+  img.classList.add("animated");
+  setTimeout(() => {
+    img.classList.remove("animated");
+  }, 500);
+};
 </script>
 <style scoped>
-.container {
-  backface-visibility:hidden;
-  overflow:hidden;
-}
 .animated {
-  animation: fadeInOut 0.5s infinite;
+  animation: fadeInOut 1s infinite;
+
+  will-change: transform;
 }
 .red {
   color: #d41515;
