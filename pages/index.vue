@@ -21,7 +21,7 @@
         ></div>
         <p class="card-text mx-4 info">
           デバ検※を受けよう<br />
-          受験は下のボタンから～<br>
+          受験は下のボタンから～<br />
           (※デバい検定)
         </p>
         <NuxtLink
@@ -34,8 +34,10 @@
           class="mx-auto mt-3 text-center border-bottom rounded-5"
           style="max-width: 320px"
         ></div>
-        <p class="card-text mx-4 mt-4 fs-5">様々なデバ験※もできます。<br>(※デバい体験)</p>
-        
+        <p class="card-text mx-4 mt-4 fs-5">
+          様々なデバ験※もできます。<br />(※デバい体験)
+        </p>
+
         <NuxtLink
           href="./debachat"
           class="btn a hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
