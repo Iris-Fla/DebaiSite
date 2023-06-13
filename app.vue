@@ -14,7 +14,6 @@
 /*フォント,画面遷移時のフェード設定 */
 body {
   font-family: "Kiwi Maru", sans-serif;
-  /*font-family: "DotGothic16", sans-serif;*/
 }
 .page-enter-active,
 .page-leave-active {
@@ -45,9 +44,13 @@ body {
 .c {
   background: #c78282;
 }
+.d {
+  background: #e8e67f;
+}
 </style>
 <script setup lang="ts">
 useHead({
   title: "デバ検",
 });
+
 </script>

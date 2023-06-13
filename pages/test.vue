@@ -1,25 +1,36 @@
-<!-- Button trigger modal -->
 <template>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <h1>Nuxt3 Jamstack Blogs</h1>
+  <ul>
+    <li v-for="blog in data?.contents" :key="blog.id">
+      <NuxtLink :to="`/${blog.id}`">
+        <img
+          :src="blog.eyecatch?.url"
+          :width="blog.eyecatch?.width"
+          :height="blog.eyecatch?.height"
+          alt=""
+        />
+        <div>
+          <div>
+            {{ blog.category?.name }}
+          </div>
+          <div>
+            {{ blog.title }}
+          </div>
+          <div>
+            {{ blog.publishedAt ?? blog.createdAt }}
+          </div>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+      </NuxtLink>
+    </li>
+  </ul>
 </template> 
+
+
+<script setup lang="ts">
+import { Blog } from "~~/types/Blog";
+
+const { data } = await useMicroCMSGetList<Blog>({
+  endpoint: "blogs",
+});
+console.log(data)
+</script>

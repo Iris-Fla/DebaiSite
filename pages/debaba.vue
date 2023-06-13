@@ -35,3 +35,12 @@
   color: #9b4b16;
 }
 </style>
+<script>
+export default {
+  setup () {
+    useHead({
+      title:"デバウト",
+    })
+  }
+}
+</script>

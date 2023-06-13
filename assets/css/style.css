@@ -1,10 +1,10 @@
 /*全画面に画像表示する　参考サイト:https://allabout.co.jp/gm/gc/452705 */
 body {
-  background-image: url("@/assets/bg.png");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-}
+    background-image: url("@/assets/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+  }
 .border-bottom {
   border: 10px solid#fcbda3;
 }

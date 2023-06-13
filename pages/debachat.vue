@@ -5,35 +5,29 @@
       style="max-width: 25rem"
     >
       <img
-        src="@/assets/deba.jpg"
+        src="/hamu.jpg"
         class="card-img-to rounded-5 rounded-bottom"
         alt="..."
       />
       <div class="card-body mb-3">
         <p class="card-title text-center cocoa title_text">
-          <span>デババ！</span>
+          <span>工事中</span>
         </p>
         <p class="card-text text-center fs-5">
-          ～可愛い生き物～<br /><span class="zunda">ハダカデバネズミ</span>
+          ゴンゴン🔧<br /><span class="zunda">終了時期:未定</span>
         </p>
-        <div
+        <NuxtLink
           href="./"
           class="btn mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
         >
           戻る
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
-.body-style {
-  background-image: url("@/assets/bg.png");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-}
 .cocoa {
   color: #875647;
 }
@@ -49,5 +43,24 @@
   color: #8b512a;
 }
 </style>
+<style>
+.body-class {
+  background-image: url("@/assets/ChatBG.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  font-family: "DotGothic16", sans-serif;
+}
+</style>
 <script>
+export default {
+  setup () {
+    useHead({
+      title:"デバチャット",
+      bodyAttrs: {
+        class: 'body-class'
+      }
+    })
+  }
+}
 </script>

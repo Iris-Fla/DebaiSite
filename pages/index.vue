@@ -37,22 +37,27 @@
         <p class="card-text mx-4 mt-4 fs-5">
           様々なデバ験※もできます。<br />(※デバい体験)
         </p>
-
         <NuxtLink
           href="./debachat"
           class="btn a hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
-          >デバチャット💬</NuxtLink
+          >デバチャット💬 (工事中)</NuxtLink
+        >
+        <NuxtLink
+          href="./debaloglist"
+          class="btn b hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+          style="height: 60px"
+          >デバブログ📄 (工事中)</NuxtLink
         >
         <NuxtLink
           href="./debaba"
-          class="btn b hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+          class="btn c hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
           >デバウト🐭(About)</NuxtLink
         >
         <NuxtLink
           href="./error"
-          class="btn c hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
+          class="btn d hover-effect mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
           style="height: 60px"
           >おまけ💘 ※デバーページ(error)</NuxtLink
         >

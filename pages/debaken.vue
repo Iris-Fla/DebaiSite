@@ -13,9 +13,6 @@
         <p class="card-title text-center debacolor title_text">
           <span>{{ questions[NowQuestion].title_text }}</span>
         </p>
-        <p class="card-title text-center red title_text">
-          <span>{{ questions[NowQuestion].red_title_text }}</span>
-        </p>
         <p class="card-text text-center fs-5">
           {{ currentQuestion }}
         </p>
@@ -73,7 +70,7 @@ const questions = ref([
       "歯は1週間に5ミリの速さで伸び続けており、表面に出ている歯の長さもおよそ5ミリほどなので、1週間で歯が新しく入れ替わることになるデバ",
   },
   {
-    title_text: "Life of Deba",
+    title_text: "デバ生命",
     questionText: "ハダカデバネズミの寿命は約何年?",
     ans: ["5", "10", "30"],
     correctAnswer: 2,
@@ -84,18 +81,50 @@ const questions = ref([
   {
     title_text: "デバ？",
     questionText: "これは何?",
-    ans: ["ハダカデバネズミ", "ちくわ", "わくちん"],
+    ans: ["ハダカデバネズミ", "ちくわ", "魚肉ソーセージ"],
     correctAnswer: 1,
     fileName: "/tikuwa1.jpg",
-    alert: "ちくわだよ",
+    alert: "ちくわだよ😏",
   },
   {
     title_text: "デバ！",
     questionText: "これは何?",
-    ans: ["バダガデバネズミ", "ハダカデバネズミ", "ちくわ"],
+    ans: ["バダカテハネズミ", "ハダカデバネズミ", "ちくわ"],
     correctAnswer: 1,
     fileName: "/tikuwa.jpg",
-    alert: "ちくわじゃないよ",
+    alert: "ちくわじゃないよ😅、ちなみに1番目は文字が違うよ。",
+  },
+  {
+    title_text: "ポカポカ",
+    questionText: "これは何?",
+    ans: ["カカポ", "ポカポ", "ポポカ"],
+    correctAnswer: 0,
+    fileName: "/kakapo.jpg",
+    alert: "カカポ可愛い。😍",
+  },
+  {
+    title_text: "あら^~",
+    questionText: "これは何?",
+    ans: ["パリオスネズミ", "ポッピー", "クォッカワラビー"],
+    correctAnswer: 2,
+    fileName: "/kawayusu.jpg",
+    alert: "クォッカワラビーは世界一幸せな生き物 らしい。😯",
+  },
+  {
+    title_text: "あら^~",
+    questionText: "これは何?",
+    ans: ["カワウソ", "ハダカデバネズミ", "ネズミ"],
+    correctAnswer: 0,
+    fileName: "/kawauso.jpg",
+    alert: "かわいいね😘 君のことだよ。",
+  },
+  {
+    title_text: "ギャー",
+    questionText: "どこが可愛いん？",
+    ans: ["全部", "ちくわ", "それ以外"],
+    correctAnswer: 0,
+    fileName: "/DebaOri.jpg",
+    alert: "全部に決まっている。そうに違いない🤨",
   },
 ]);
 // スコア
@@ -109,9 +138,18 @@ const NowQuestion = ref(0);
 const NextQuestion = () => {
   if (NowQuestion.value === count_question.value - 1) {
     alert("終了！あなたの正解数は" + score.value + "/" + count_question.value);
-    NowQuestion.value = 0;
-    score.value = 0;
-    location = "./";
+    if (score.value === 10 ) {
+      location = "./";
+      alert("完璧デバ😊君の前世はハダカデバネズミだと思うデバ！")
+    }
+    else if (score.value >= 8 ) {
+      location = "./";
+      alert("優秀デバ😁毎日歯磨きして、デバネズミの仲間になろう！")
+    }
+    else {
+      location = "./";
+      alert("不合格デバ😥毎日お風呂に入って体を綺麗にするべきデバ。")
+    }
     return;
   }
   NowQuestion.value++;

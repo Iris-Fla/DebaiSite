@@ -1,6 +1,8 @@
+![image](https://github.com/Iris-Fla/DebaiSite/assets/103801589/e81c7213-8a04-41f5-9377-4b5b49ba4945)
+
 # デバいサイト 🐭
 
-Nuxt3+Vue3+(Bootstrap)で製作したサイト
+Nuxt3+Vue3で製作したサイト
 
 ## Preview
 
@@ -9,18 +11,26 @@ https://iris-fla.github.io/DebaiSite/
 
 ## 作っている要素
 
-シングルページで動作するクイズ的なもの
-
-## 概要
-
-![image](https://github.com/Iris-Fla/DebaiSite/assets/103801589/e81c7213-8a04-41f5-9377-4b5b49ba4945)
+# デバ検定
+![image](https://github.com/Iris-Fla/DebaiSite/assets/103801589/c4c96f3c-bda7-412c-9411-264ac23c53d0)
 デバ検(ハダカデバネズミの検定)を受験することが出来ます。
 JavaScript を用いて点数をカウントし、最後に評価が与えられます
-目指せ！デバ検 1 級
+<sub>JavaScriptの基礎勉強をするために作りました</sub>
 
-# フローチャート(自分用)
+# デバいブログ(製作中)
+デバいブログです。(普通に何か書いてます)
+MicroCMSを用いてブログサイトのシステムを構築しました。
+<sub>Nuxt3で出来る事を試してみました</sub>
 
-![DebaChart](https://github.com/Iris-Fla/DebaiSite/assets/103801589/7eae6da9-2c42-4f1e-b0b9-29925e1b2c9b)
+# デバチャット(製作中)
+ChatGPTを使ってデバ太郎と喋る事ができます。(APIキーが必要です)
+<sub>JavaScriptの勉強の発展として作りました。</sub>
+
+# エラーページ
+![image](https://github.com/Iris-Fla/DebaiSite/assets/103801589/62c2bbc0-c76b-4d5e-a798-e7beda6f3e4e)
+何かしらのエラーが発生した際に表示されます。
+可愛いですね♡<sub>CSSアニメーションで遊ぶ用</sub>
+
 
 - 参考サイト:memo:
   - [カード](https://getbootstrap.jp/docs/5.0/components/card/)
@@ -29,4 +39,5 @@ JavaScript を用いて点数をカウントし、最後に評価が与えられ
   - [全画面の背景](https://allabout.co.jp/gm/gc/452705/)
   - [画面遷移](https://zenn.dev/con_ns_pgm/articles/04adfeae84104b)
   - [CSS アニメーション全般](https://openai.com/blog/chatgpt)
+  - [Nuxt3MicroCMS](https://blog.microcms.io/nuxt3-jamstack-blog/)
   - [Nuxt3GPT-3](https://tech-blog.rakus.co.jp/entry/20230210/nuxt3)

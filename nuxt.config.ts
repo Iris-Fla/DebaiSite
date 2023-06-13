@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default {
+  modules: ["nuxt-microcms-module"],
+  microCMS: {
+    serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+    apiKey: process.env.MICROCMS_API_KEY,
+      },
   css: ["/assets/css/style.css", "bootstrap/dist/css/bootstrap.min.css"],
   head: {
     title: "DebaiSite",
@@ -12,12 +17,14 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/DebaiSite/favicon.ico" },
     ],
+    bodyAttrs: {
+      class: 'body-class'
+    }
   },
   target: "static",
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     baseURL: "/DebaiSite/",
-    cdnURL: "https://Iris-Fla.github.io/DebaiSite/",
   },
   generate: {
     dir: "docs",
