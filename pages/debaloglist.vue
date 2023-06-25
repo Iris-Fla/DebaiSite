@@ -1,45 +1,40 @@
 <template>
-    <div class="container">
-      <div
-        class="card mx-auto my-5 shadow-lg mb-5 bg-body rounded-5"
-        style="max-width: 25rem"
-      >
-        <img
-          src="/hamu.jpg"
-          class="card-img-to rounded-5 rounded-bottom"
-          alt="..."
-        />
-        <div class="card-body mb-3">
-          <p class="card-title text-center cocoa title_text">
-            <span>工事中</span>
+  <div class="container">
+  <div
+    v-for="blog in data?.contents"
+    :key="blog.id"
+    class="mx-auto my-3 card mb-3 rounded-4"
+    style="max-width: 540px;"
+  >
+  <NuxtLink
+      :to="`/${blog.id}`"
+      class="flex flex-col gap-4 sm:transition-shadow sm:hover:shadow md:flex-row md:items-center lg:gap-6"
+    >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img :src="blog.eyecatch?.url" alt="..." style="" class="card-img rounded-4"/>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title">{{ blog.title }}</h3>
+          <p class="card-text">{{ blog.subtitle }}</p>
+          <p class="card-text">
+            <small class="text-muted"
+              >カテゴリー:{{ blog.category?.name }}</small
+            >
           </p>
-          <p class="card-text text-center fs-5">
-            ゴンゴン🔧<br /><span class="zunda">終了時期:未定</span>
-          </p>
-          <NuxtLink
-            href="./"
-            class="btn mt-4 mx-3 d-flex align-items-center rounded-pill text-center"
-            style="height: 60px"
-          >
-            戻る
-          </NuxtLink>
         </div>
       </div>
     </div>
-  </template>
-  <style scoped>
-  .cocoa {
-    color: #875647;
-  }
-  .btn {
-    color: var(--bs-white);
-    background: #fcbda3;
-  }
-  .title_text {
-    font-size: 80px;
-  }
-  .zunda {
-    font-size: 30px;
-    color: #8b512a;
-  }
-  </style>
+  </NuxtLink>
+  </div>
+</div>
+</template>
+
+<script setup lang="ts">
+import { Blog } from "../plugins/blog";
+
+const { data } = await useMicroCMSGetList<Blog>({
+endpoint: "blogs",
+});
+</script>
